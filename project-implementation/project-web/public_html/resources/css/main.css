@@ -1,0 +1,131 @@
+:root {
+  --main-bg-color: #21262b;
+  --purple-primary-color: #9e41ce;
+  --purple-navbar-color: #ac43e0;
+}
+
+.text-primary {
+  color: var(--purple-primary-color) !important;
+}
+
+.btn-disable {
+  color: #fff;
+  background-color: #9f41ce4f !important;
+  border: 0 !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--purple-primary-color);
+  border-color: var(--purple-primary-color);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #7f31a7;
+  border-color: #7f31a7;
+}
+
+.btn-primary:active {
+  background-color: var(--purple-primary-color) !important;
+  border-color: var(--purple-primary-color) !important;
+}
+
+.btn:visited {
+  border-color: #00ffc8 !important;
+}
+
+.btn:focus {
+  outline: none !important;
+}
+
+
+/* .btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #770bc4;
+    border-color: #770bc4;
+  } */
+
+.bg-primary {
+  background-color: var(--purple-primary-color) !important;
+}
+
+/*another-popop style*/
+
+.another-popup .leaflet-popup-content-wrapper {
+  background: var(--main-bg-color);
+  ;
+  color: #fff;
+  font-size: 1rem;
+  /* line-height: 24px; */
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--purple-primary-color);
+  box-shadow: 2px 2px 12px #47505a;
+}
+
+.another-popup .leaflet-popup-content-wrapper a {
+  color: rgba(200, 200, 200, 0.1);
+}
+
+.another-popup .leaflet-popup-tip-container {
+  width: 50px;
+  height: 15px;
+}
+
+.another-popup .leaflet-popup-tip {
+  background: var(--purple-primary-color);
+  border: none;
+  box-shadow: none;
+  /* border-style: solid; */
+  box-shadow: 2px 2px 12px #47505a;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+.bg-secondary {
+  background-color: var(--main-bg-color) !important;
+}
+
+.about-us-name {
+  font-size: 1.4rem;
+  color: var(--purple-primary-color);
+}
+
+.true-shadow {
+  -webkit-filter: drop-shadow(1px 2px 12px rgb(255, 230, 230));
+  filter: drop-shadow(0px 0px 5px #fffcf588);
+}
+
+/* .further-apart-text {
+  line-height: 2em;
+} */
+
+.fa {
+  color: var(--purple-primary-color);
+}
+
+.active {
+  color: var(--purple-navbar-color) !important;
+}
+
+.nav-link:hover {
+  color: var(--purple-navbar-color) !important;
+}
+
+.navbar-brand {
+  color: var(--purple-navbar-color) !important;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.full-purple-link {
+  color: var(--purple-primary-color);
+}
+
+.full-purple-link:hover {
+  color: #b34ae7;
+}

@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# General project settings
+#################################
+
+# The project name is base for directories, hostname and alike
+project_name = "ceid-project-web-2018"
+www_folder = "../project-web"
+
+# Vagrant configuration
+#################################
+
+Vagrant.configure("2") do |config|
+    # Define VM box to use
+    config.vm.provider "virtualbox" do |v|
+        v.customize ["modifyvm", :id, "--cpuexecutioncap", "80"]
+        v.memory = 1024
+        v.cpus = 2
+      end
+      
+    config.vm.box = "ubuntu/bionic64"
+    config.vm.box_version = "20190209.0.0"
+
+    # Set share folder
+    config.vm.synced_folder www_folder , "/var/www/project-web/", :mount_options => ["dmode=777", "fmode=666"]
+
+    #Begin Configuring
+    config.vm.define project_name do|prj|
+        prj.vm.hostname = project_name 
+        prj.vm.network "public_network", use_dhcp_assigned_default_route: true
+        prj.vm.provision:shell,path:"./startupScript.sh"
+    end
+
+  end
+  

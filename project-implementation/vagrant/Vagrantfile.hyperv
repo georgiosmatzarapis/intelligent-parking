@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# General project settings
+#################################
+
+# The project name is base for directories, hostname and alike
+project_name = "ceid-project-web-2018"
+www_folder = "../project-web"
+
+# Vagrant configuration
+#################################
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "bento/ubuntu-18.04"
+
+    # Set share folder
+    config.vm.synced_folder www_folder , "/var/www/project-web/" 
+
+    #Begin Configuring
+    config.vm.define project_name do|prj|
+        prj.vm.provision:shell,path:"./startupScript.sh"
+    end
+
+  end
+  

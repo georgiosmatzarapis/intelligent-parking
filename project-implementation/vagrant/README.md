@@ -1,0 +1,1 @@
+Rename Vagrantfile.PROVIDER to Vagrantfile according to the provider you want to use and reun vagrant up.
